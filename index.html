@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistemas de Armazenamento de Peças</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body background="img/wallpaperazul.jpg">
+  <div class="container">
+    <div class="header">
+        <span>Sistemas de Armazenamento de Peças</span>
+        
+        <button onclick="openModal()" id="new">Adicionar</i></button>
+      </div>
+  
+      <div class="divTable">
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome</th>
+              <th>Fabricante</th>
+              <th>Descrição</th>
+              <th>Quantidade</th>
+              <th class="acao">Editar</th>
+              <th class="acao">Deletar</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr> <!-- Da linha 34 a 45 tentei inserir peças já cadastradas no sistema porém não consegui mesmo com o uso "<td>" no qual define as células da tabela -->
+                <td>DSS22F</td> <!-- O código da peça -->
+                <td>Manômetro</td> <!-- O nome da peça -->
+                <td>WIKA</td> <!-- O fabricante da peça -->
+                <td>Medição higiênica de pressão em aplicações sanitárias para a indústria alimentícia e de bebidas</td> <!-- A descrição da peça -->
+                <td>1</td> <!-- A quantidade da peça -->
+                <!-- Esses valores já inseridos seriam da peça já cadastrada no sistema como demonstração -->
+
+                <!-- Ao colocar "<button type="button">editar</button>" e "<button type="button">excluir</button>" os botões de "editar" e "excluir" ficam no header -->
+            </tr>
+            <tr>
+                <td>THM10</td>
+                <td>Termomanômetro bimetálico</td>
+                <td>WIKA</td>
+                <td>Versão ecológica, para medição de pressão e temperatura</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+  
+      <div class="modal-container">
+        <div class="modal">
+          <form>
+            <label for="m-codigo">Codigo</label>
+            <input id="m-codigo" type="text" required />
+
+            <label for="m-nome">Nome</label>
+            <input id="m-nome" type="text" required />
+    
+            <label for="m-fabricante">Fabricante</label>
+            <input id="m-fabricante" type="text" required />
+    
+            <label for="m-descricao">Descrição</label>
+            <input id="m-descricao" type="text" required />
+
+            <label for="m-quantidade">Quantidade</label>
+            <input id="m-quantidade" type="number" required />
+            <button id="btnSalvar">Salvar</button>
+          </form>
+        </div>
+      </div>
+  
+    </div>
+    <script src="script.js"></script>
+  </body>
+  
+  </html>
